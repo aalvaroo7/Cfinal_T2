@@ -1,6 +1,6 @@
 package gestion_habitats;
 
-public class habitats_aviario extends Habitats{
+public class HabitatAviario extends Habitats{
 
     boolean puedeVolar;
 

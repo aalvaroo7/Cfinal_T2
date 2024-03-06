@@ -17,7 +17,7 @@ public class Habitats {
     }
 
     @Override
-    public Habitats clone() {
+    public Habitats clone() throws CloneNotSupportedException {
         return new Habitats(this.temperatura, this.humedad, this.limpieza);
     }
 
