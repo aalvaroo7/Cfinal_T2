@@ -1,6 +1,6 @@
 package animales.animales;
 
-public class acuaticos extends animales {
+public class animal_acuaticos extends animales {
  
 
         boolean aletas;
@@ -8,10 +8,10 @@ public class acuaticos extends animales {
         boolean escamas;
         String tipo_agua;
 
-        public acuaticos(String nombre, String especie, String raza, String color, String sexo, String edad,
-                               String peso, String altura, String tipo, String habitat, String alimentacion, String reproduccion,
-                               String cuidados, String enfermedades, String vacunas, int id,boolean salud, boolean comportamiento, boolean aletas, boolean branquias,
-                               boolean escamas, String tipo_agua) {
+        public animal_acuaticos(String nombre, String especie, String raza, String color, String sexo, String edad,
+                                String peso, String altura, String tipo, String habitat, String alimentacion, String reproduccion,
+                                String cuidados, String enfermedades, String vacunas, int id, boolean salud, boolean comportamiento, boolean aletas, boolean branquias,
+                                boolean escamas, String tipo_agua) {
             super(nombre, especie, raza, color, sexo, edad, peso, altura, tipo, habitat, alimentacion, reproduccion, cuidados,
                     enfermedades, vacunas, id, salud, comportamiento);
             this.aletas = aletas;
