@@ -17,7 +17,7 @@ public class Habitats {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Habitats clone() {
         return new Habitats(this.temperatura, this.humedad, this.limpieza);
     }
 
@@ -28,7 +28,7 @@ public class Habitats {
         if (obj == null || getClass() != obj.getClass())
             return false;
         Habitats other = (Habitats) obj;
-        return Float.compare(other.temperatura, temperatura) == 0 && Float.compare(other.humedad, humedad) == 0 && limpieza == other.limpieza;
+        return Float.compare(temperatura, other.temperatura) == 0 && Float.compare(humedad, other.humedad) == 0 && limpieza == other.limpieza;
     }
 
     @Override
