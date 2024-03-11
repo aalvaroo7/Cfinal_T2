@@ -50,16 +50,4 @@ public class animal_terrestres extends animales {
     public void setTipoTerrestre(String tipoTerrestre) {
         this.tipoTerrestre = tipoTerrestre;
     }
-
-    public void registrarAlimentacion(String alimentacion) {
-        this.alimentacion = alimentacion;
-    }
-
-    public void registrarSalud(boolean salud) {
-        this.salud = salud;
-    }
-
-    public void registrarComportamiento(boolean comportamiento) {
-        this.comportamiento = comportamiento;
-    }
 }
