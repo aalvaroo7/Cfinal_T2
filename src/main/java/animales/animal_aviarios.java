@@ -1,4 +1,4 @@
-package animales.animales;
+package animales;
 
 public class animal_aviarios extends animales {
     boolean vuela;

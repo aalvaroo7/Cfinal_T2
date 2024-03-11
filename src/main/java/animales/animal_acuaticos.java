@@ -1,4 +1,4 @@
-package animales.animales;
+package animales;
 
 public class animal_acuaticos extends animales {
  
