@@ -2,7 +2,6 @@ package main;
 
 import gestion_habitats.habitats;
 import gestion_personal.Camera;
-import animales.animal;
 
 public class Visitor extends Person {
     private habitats habitat;

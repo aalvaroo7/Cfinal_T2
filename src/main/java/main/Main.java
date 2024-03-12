@@ -1,9 +1,8 @@
 package main;
 import java.util.Scanner;
 import java.util.ArrayList;
-import animales.animal;
+
 import gestion_habitats.habitats;
-import main.Staff;
 import gestion_recursos.Resource;
 
 public class Main {
@@ -36,7 +35,7 @@ public class Main {
             switch (input) {
                 case "1":
                     // Call methods related to managing animals
-                    // animal.manage();
+                    animal.manage();
                     break;
                 case "2":
                     // Call methods related to managing habitats

@@ -1,7 +1,7 @@
 package main;
 
 import gestion_recursos.Resource;
-import animales.animal;
+
 import java.util.List;
 
 public class Staff extends Person {
