@@ -2,8 +2,11 @@ package main;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+import animales.animal; // Import the animal class
 import gestion_habitats.habitats;
+import main.Staff; // Import the Staff class
 import gestion_recursos.Resource;
+import gestion_recursos.ConcreteResource; // Assuming you have a ConcreteResource class
 
 public class Main {
     private animal animal;
@@ -12,13 +15,10 @@ public class Main {
     private Resource resourceManagement;
 
     public Main() {
-        // Initialize the modules here
-        // Replace the parameters with appropriate values
         this.animal = new animal("name", "species", "breed", "color", "sex", "age", "weight", "height", "type", "habitat", "feeding", "reproduction", "care", "diseases", "vaccines", 1, true, true);
         this.habitatManagement = new habitats(25.0f, 50.0f, true);
         this.staffManagement = new Staff(new ArrayList<>(), new ArrayList<>());
-        // You cannot instantiate an abstract class. You need to instantiate a class that extends Resource.
-        // this.resourceManagement = new Resource();
+        this.resourceManagement = new ConcreteResource(); // Instantiate a concrete subclass of Resource
     }
 
     public void start() {
@@ -34,20 +34,20 @@ public class Main {
             String input = scanner.nextLine();
             switch (input) {
                 case "1":
-                    // Call methods related to managing animals
+                    // Ensure the manage method exists in the animal class
                     animal.manage();
                     break;
                 case "2":
-                    // Call methods related to managing habitats
-                    // habitatManagement.manage();
+                    // Ensure the manage method exists in the habitats class
+                    habitatManagement.manage();
                     break;
                 case "3":
-                    // Call methods related to managing staff
-                    // staffManagement.manage();
+                    // Ensure the manage method exists in the Staff class
+                    staffManagement.manage();
                     break;
                 case "4":
-                    // Call methods related to managing resources
-                    // resourceManagement.manage();
+                    // Ensure the manage method exists in the Resource class
+                    resourceManagement.manage();
                     break;
                 case "5":
                     System.out.println("Exiting...");

@@ -1,40 +1,18 @@
 package gestion_habitats;
 
 public class habitats {
-    float temperatura;
-    float humedad;
-    boolean limpieza;
+    private float temperatura;
+    private float humedad;
+    private boolean limpieza;
 
-    public habitats(float temperatura,float humedad,boolean limpieza) {
+    public habitats(float temperatura, float humedad, boolean limpieza) {
         this.temperatura = temperatura;
         this.humedad = humedad;
         this.limpieza = limpieza;
     }
 
-
-    public String toString() {
-        return "habitats []";
-    }
-
-
-    protected Object clone() throws CloneNotSupportedException {
-        // TODO Auto-generated method stub
-        return super.clone();
-    }
-
-
-    public boolean equals(Object obj) {
-        // TODO Auto-generated method stub
-        return super.equals(obj);
-    }
-
-    public int hashCode() {
-        // TODO Auto-generated method stub
-        return super.hashCode();
-    }
-
     public float getTemperatura() {
-        return temperatura;
+        return this.temperatura;
     }
 
     public void setTemperatura(float temperatura) {
@@ -42,7 +20,7 @@ public class habitats {
     }
 
     public float getHumedad() {
-        return humedad;
+        return this.humedad;
     }
 
     public void setHumedad(float humedad) {
@@ -50,11 +28,17 @@ public class habitats {
     }
 
     public boolean isLimpieza() {
-        return limpieza;
+        return this.limpieza;
     }
 
     public void setLimpieza(boolean limpieza) {
         this.limpieza = limpieza;
     }
-    
+
+    public void manage() {
+        System.out.println("Managing the habitat...");
+        System.out.println("Current temperature: " + this.temperatura);
+        System.out.println("Current humidity: " + this.humedad);
+        System.out.println("Is clean: " + (this.limpieza ? "Yes" : "No"));
+    }
 }
