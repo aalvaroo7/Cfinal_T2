@@ -35,7 +35,7 @@ public class Main {
                 // Corrected the constructor call for habitats
                 habitats visitorHabitat = new habitats(1.0f, 1.0f, true);
                 Camera visitorCamera = new Camera(1, "Camera1");
-                animal visitorAnimal = new animal("Animal1", "Type1", "Description1", "Habitat1", "Diet1", "Status1", "Image1");
+                animal visitorAnimal = new animal("Animal1", "Type1", "Raza1", "Color1", "Sexo1", "Edad1", "Peso1", "Altura1", "Tipo1", "Habitat1", "Alimentacion1", "Reproduccion1", "Cuidados1", "Enfermedades1", "Vacunas1", 1, true, true);
                 user = new Visitor(visitorHabitat, visitorCamera, visitorAnimal);
                 break;
             default:
