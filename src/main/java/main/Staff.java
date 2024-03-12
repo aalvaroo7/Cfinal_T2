@@ -1,16 +1,13 @@
 package main;
 
-import gestion_recursos.Resource;
-import animales.animal; // Import the animal class
 import java.util.List;
+import gestion_recursos.Resource;
 
 public class Staff extends Person {
     private List<Resource> resources;
-    private List<animal> animals;
 
-    public Staff(List<Resource> resources, List<animal> animals) {
+    public Staff(List<Resource> resources) {
         this.resources = resources;
-        this.animals = animals;
     }
 
     public String identify() {
@@ -21,7 +18,13 @@ public class Staff extends Person {
         return resources;
     }
 
-    public List<animal> getAnimals() {
-        return animals;
+    public void manage() {
+        System.out.println("Managing the resources...");
+        for (Resource resource : resources) {
+            System.out.println("Resource name: " + resource.getName());
+            System.out.println("Current food: " + resource.getFood());
+            System.out.println("Current medicine: " + resource.getMedicine());
+            System.out.println("Current equipment: " + resource.getEquipment());
+        }
     }
 }
