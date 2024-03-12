@@ -17,7 +17,7 @@ public class Main {
     public Main() {
         this.animal = new animal("name", "species", "breed", "color", "sex", "age", "weight", "height", "type", "habitat", "feeding", "reproduction", "care", "diseases", "vaccines", 1, true, true);
         this.habitatManagement = new habitats(25.0f, 50.0f, true);
-        this.staffManagement = new Staff(new ArrayList<>(), new ArrayList<>());
+        this.staffManagement = new Staff(new ArrayList<Resource>());
         this.resourceManagement = new ConcreteResource(); // Instantiate a concrete subclass of Resource
     }
 
