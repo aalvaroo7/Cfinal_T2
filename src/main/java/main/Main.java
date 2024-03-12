@@ -6,10 +6,6 @@ import gestion_recursos.Resource;
 import animales.animal;
 import java.util.ArrayList;
 import java.util.List;
-import main.Boss;
-import main.Staff;
-import main.Visitor;
-
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
