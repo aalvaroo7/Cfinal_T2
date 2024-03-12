@@ -1,5 +1,6 @@
 package main;
 
+import animales.animal;
 import gestion_habitats.habitats;
 import gestion_personal.Camera;
 
@@ -30,7 +31,4 @@ public class Visitor extends Person {
         return observedAnimal;
     }
 
-    public String getAnimalHealthStatus() {
-        return observedAnimal.getHealthStatus();
-    }
 }
