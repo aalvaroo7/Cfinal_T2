@@ -11,12 +11,31 @@ public class MaintenanceTracker {
     }
 
     public void scheduleMaintenance(Maintenance maintenance) {
-        // add maintenance to maintenances
+        this.maintenances.add(maintenance);
     }
+
 
     public void registerRepair(Repair repair) {
-        // add repair to repairs
+        this.repairs.add(repair);
     }
 
-    // other methods to track maintenance and repairs
+    public List<Maintenance> getMaintenancesForFacility(int facilityId) {
+        List<Maintenance> facilityMaintenances = new ArrayList<>();
+        for (Maintenance maintenance : this.maintenances) {
+            if (maintenance.getFacilityId() == facilityId) {
+                facilityMaintenances.add(maintenance);
+            }
+        }
+        return facilityMaintenances;
+    }
+
+    public List<Repair> getRepairsForFacility(int facilityId) {
+        List<Repair> facilityRepairs = new ArrayList<>();
+        for (Repair repair : this.repairs) {
+            if (repair.getFacilityId() == facilityId) {
+                facilityRepairs.add(repair);
+            }
+        }
+        return facilityRepairs;
+    }
 }
