@@ -340,6 +340,15 @@ public class animal {
     }
 
 
+        private String healthStatus;
+
+        // other methods and fields...
+
+        public String getHealthStatus() {
+            return healthStatus;
+        }
+
+        // other methods and fields...
 
 
 
