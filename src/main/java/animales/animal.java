@@ -250,21 +250,20 @@ public class animal {
         this.comportamiento = comportamiento;
     }
 
-    public char buenasalud(boolean salud) {
-        if (salud == true)
+    public void buenasalud(boolean salud) {
+        if (salud)
             System.out.println("El animal " + nombre + " se encuentra en buen estado de salud");
         else
             System.out.println("El animal " + nombre + " se encuentra en mal estado de salud");
-        return 0;
     }
 
-    public char buencomportamiento(boolean comportamiento) {
-        if (comportamiento == true)
+    public void buencomportamiento(boolean comportamiento) {
+        if (comportamiento)
             System.out.println("El animal " + nombre + " se encuentra en buen estado de comportamiento");
         else
             System.out.println("El animal " + nombre + " se encuentra en mal estado de comportamiento");
-        return 0;
     }
+
 
     //metodo para registrar la alimentación
     public void registrarAlimentacion(String alimento) {
@@ -337,10 +336,11 @@ public class animal {
     }
 
     // metodo para registrar el comportamiento
-    public void registrarComportamiento(boolean comportamiento) {
-        System.out.println(buencomportamiento(comportamiento));
-    }
 
+
+    public void registrarComportamiento(boolean comportamiento) {
+        buencomportamiento(comportamiento);
+    }
 
 
 
