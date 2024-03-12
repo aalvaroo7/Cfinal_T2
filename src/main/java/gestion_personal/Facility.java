@@ -48,4 +48,5 @@ public class Facility {
     public void setUrgentRepairNeeded(boolean urgentRepairNeeded) {
         this.urgentRepairNeeded = urgentRepairNeeded;
     }
+
 }

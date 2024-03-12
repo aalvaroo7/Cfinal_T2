@@ -2,6 +2,22 @@ package gestion_personal;
 import java.util.ArrayList;
 import java.util.List;
 public class MaintenanceTracker {
+
+    public List<Camera> getAllCameras() {
+        List<Camera> allCameras = new ArrayList<>();
+        for (Facility facility : this.facilities) {
+            allCameras.addAll(facility.getCameras());
+        }
+        return allCameras;
+    }
+
+    public List<Sensor> getAllSensors() {
+        List<Sensor> allSensors = new ArrayList<>();
+        for (Facility facility : this.facilities) {
+            allSensors.addAll(facility.getSensors());
+        }
+        return allSensors;
+    }
     private List<Facility> facilities;
     private List<Maintenance> maintenances;
     private List<Repair> repairs;
