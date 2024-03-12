@@ -2,7 +2,7 @@ package animales;
 
 public class animal {
 
-    
+
     String nombre;
     String especie;
     String raza;
@@ -250,18 +250,20 @@ public class animal {
         this.comportamiento = comportamiento;
     }
 
-    public void buenasalud(boolean salud) {
+    public char buenasalud(boolean salud) {
         if (salud == true)
             System.out.println("El animal " + nombre + " se encuentra en buen estado de salud");
         else
             System.out.println("El animal " + nombre + " se encuentra en mal estado de salud");
+        return 0;
     }
 
-    public void buencomportamiento(boolean comportamiento) {
+    public char buencomportamiento(boolean comportamiento) {
         if (comportamiento == true)
             System.out.println("El animal " + nombre + " se encuentra en buen estado de comportamiento");
         else
             System.out.println("El animal " + nombre + " se encuentra en mal estado de comportamiento");
+        return 0;
     }
 
     //metodo para registrar la alimentación
@@ -341,7 +343,7 @@ public class animal {
 
 
 
-    
 
- 
+
+
 }
