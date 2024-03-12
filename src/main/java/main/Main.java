@@ -17,23 +17,7 @@ public class Main {
         System.out.println("¿Qué tipo de persona eres? (staff, boss, visitor)");
         String userType = scanner.nextLine();
 
-        Person user;
-
-        // Create three aquatic animals
-        animal_acuatico aquaticAnimal1 = new animal_acuatico("Shark", "Fish", "Great White", "Grey", "Male", "10", "2000kg", "6m", "Predator", "Ocean", "Fish", "Eggs", "None", "None", "None", 1, true, true, true, true, true, "Saltwater");
-        animal_acuatico aquaticAnimal2 = new animal_acuatico("Dolphin", "Mammal", "Bottlenose", "Grey", "Female", "8", "150kg", "2.5m", "Mammal", "Ocean", "Fish", "Live Birth", "None", "None", "None", 2, true, true, false, false, false, "Saltwater");
-        animal_acuatico aquaticAnimal3 = new animal_acuatico("Turtle", "Reptile", "Green Sea Turtle", "Green", "Male", "80", "150kg", "1.5m", "Reptile", "Ocean", "Seagrass", "Eggs", "None", "None", "None", 3, true, true, false, true, true, "Saltwater");
-
-        // Create three aviary animals
-        animal_aviario aviaryAnimal1 = new animal_aviario("Eagle", "Bird", "Bald Eagle", "Brown and White", "Male", "5", "7kg", "1m", "Bird of Prey", "Forest", "Fish", "Eggs", "None", "None", "None", 4, true, true, true, true, true, "Forest Aviary");
-        animal_aviario aviaryAnimal2 = new animal_aviario("Parrot", "Bird", "Macaw", "Multicolor", "Female", "10", "1kg", "0.5m", "Bird", "Rainforest", "Fruits", "Eggs", "None", "None", "None", 5, true, true, true, true, true, "Rainforest Aviary");
-        animal_aviario aviaryAnimal3 = new animal_aviario("Owl", "Bird", "Barn Owl", "White and Brown", "Male", "3", "1kg", "0.4m", "Bird of Prey", "Forest", "Mice", "Eggs", "None", "None", "None", 6, true, true, true, true, true, "Forest Aviary");
-
-        // Create three terrestrial animals
-        animal_terrestre terrestrialAnimal1 = new animal_terrestre("Lion", "Mammal", "African Lion", "Golden", "Male", "8", "190kg", "2m", "Predator", "Savannah", "Meat", "Live Birth", "None", "None", "None", 7, true, true, true, true, true, "Savannah Habitat");
-        animal_terrestre terrestrialAnimal2 = new animal_terrestre("Elephant", "Mammal", "African Elephant", "Grey", "Female", "25", "6000kg", "3m", "Herbivore", "Savannah", "Plants", "Live Birth", "None", "None", "None", 8, true, true, true, true, false, "Savannah Habitat");
-        animal_terrestre terrestrialAnimal3 = new animal_terrestre("Kangaroo", "Mammal", "Red Kangaroo", "Red", "Male", "6", "85kg", "1.5m", "Herbivore", "Outback", "Grass", "Live Birth", "None", "None", "None", 9, true, true, true, true, true, "Outback Habitat");
-
+        Person user ;
         switch (userType.toLowerCase()) {
             case "staff":
                 List<Resource> staffResources = new ArrayList<>();
