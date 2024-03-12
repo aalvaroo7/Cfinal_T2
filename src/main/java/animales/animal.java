@@ -172,14 +172,8 @@ public class animal {
     }
 
 
-    public String getAlimentacion() {
-        return alimentacion;
-    }
 
 
-    public void setAlimentacion(String alimentacion) {
-        this.alimentacion = alimentacion;
-    }
 
 
     public String getReproduccion() {
@@ -335,13 +329,42 @@ public class animal {
     }
 
     // metodo para registrar el comportamiento
-    public void registrarComportamiento(boolean comportamiento) {
-        System.out.println(buencomportamiento(comportamiento));
+    // New fields for management
+
+    private float temperatura;
+
+
+    // Existing constructor...
+
+    // New getters and setters
+    public String getAlimentacion() {
+        return alimentacion;
+    }
+
+    public void setAlimentacion(String alimentacion) {
+        this.alimentacion = alimentacion;
+    }
+
+    public float getTemperatura() {
+        return temperatura;
+    }
+
+    public void setTemperatura(float temperatura) {
+        this.temperatura = temperatura;
     }
 
 
+    public void setComportamiento(String comportamiento) {
+        this.comportamiento = Boolean.parseBoolean(comportamiento);
+    }
 
-    
+    // Existing methods...
 
- 
+    // New management method
+    public void manage() {
+        System.out.println("Managing the animal...");
+        System.out.println("Current alimentacion: " + this.alimentacion);
+        System.out.println("Current temperatura: " + this.temperatura);
+        System.out.println("Current comportamiento: " + this.comportamiento);
+    }
 }
