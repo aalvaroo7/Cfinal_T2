@@ -4,8 +4,9 @@ import gestion_habitats.habitats;
 import gestion_personal.Camera;
 import gestion_recursos.Resource;
 import java.util.List;
-public class Boss {
-    private List<gestion_habitats.habitats> habitats;
+
+public class Boss extends Person {
+    private List<habitats> habitats;
     private List<Camera> cameras;
     private List<Resource> resources;
 
