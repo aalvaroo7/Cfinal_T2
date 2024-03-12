@@ -50,4 +50,7 @@ public class Inventory {
     public boolean checkEquipment(Equipment equipment) {
         return equipmentList.contains(equipment);
     }
+
+    public static class Supplier {
+    }
 }
