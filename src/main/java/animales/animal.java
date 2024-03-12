@@ -45,30 +45,26 @@ public class animal {
     }
 
 
-    @Override
+
     public String toString() {
         return "animal []";
     }
 
-    @Override
+
     protected Object clone() throws CloneNotSupportedException {
         // TODO Auto-generated method stub
         return super.clone();
     }
 
-    @Override
+
     public boolean equals(Object obj) {
         // TODO Auto-generated method stub
         return super.equals(obj);
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        // TODO Auto-generated method stub
-        super.finalize();
-    }
 
-    @Override
+
+
     public int hashCode() {
         // TODO Auto-generated method stub
         return super.hashCode();
@@ -250,11 +246,12 @@ public class animal {
         this.comportamiento = comportamiento;
     }
 
-    public void buenasalud(boolean salud) {
+    public char buenasalud(boolean salud) {
         if (salud)
             System.out.println("El animal " + nombre + " se encuentra en buen estado de salud");
         else
             System.out.println("El animal " + nombre + " se encuentra en mal estado de salud");
+        return 0;
     }
 
     public void buencomportamiento(boolean comportamiento) {
