@@ -1,7 +1,6 @@
 package main;
 
 import java.util.List;
-import gestion_recursos.Resource;
 
 public class Staff extends Person {
     private List<Resource> resources;

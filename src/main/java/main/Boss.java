@@ -2,7 +2,7 @@ package main;
 
 import gestion_habitats.habitats;
 import gestion_personal.Camera;
-import gestion_recursos.Resource;
+
 import java.util.List;
 
 public class Boss extends Person {
