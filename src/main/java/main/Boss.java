@@ -1,15 +1,17 @@
 package main;
 
 import gestion_habitats.habitats;
+import gestion_recursos.Recursos;
+import seguridad.Seguridad;
 
 import java.util.List;
 
 public class Boss extends Person {
     private List<habitats> habitats;
-    private List<Camera> cameras;
-    private List<Resource> resources;
+    private List<Seguridad> cameras;
+    private List<Recursos> resources;
 
-    public Boss(List<habitats> habitats, List<Camera> cameras, List<Resource> resources) {
+    public Boss(List<habitats> habitats, List<Seguridad> cameras, List<Recursos> resources) {
         this.habitats = habitats;
         this.cameras = cameras;
         this.resources = resources;
@@ -23,11 +25,11 @@ public class Boss extends Person {
         return habitats;
     }
 
-    public List<Camera> getCameras() {
+    public List<Seguridad> getCameras() {
         return cameras;
     }
 
-    public List<Resource> getResources() {
+    public List<Recursos> getResources() {
         return resources;
     }
 }
