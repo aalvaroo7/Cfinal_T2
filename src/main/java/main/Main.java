@@ -23,7 +23,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Definir las variables
-        System.out.println("¿Eres un visitante, un trabajador o deseas ver los recursos del zoológico? (V/T/R)");
+        System.out.println("¿Eres un visitante, un trabajador o deseas ver los recursos del zoológico? (Vigilar/Trabajadir/Recursos)");
         String userType = scanner.nextLine(); // Aquí el usuario introduce su tipo
 
         habitats acuatico = new habitats(100.0f, 75.0f, true);
@@ -31,25 +31,26 @@ public class Main {
         habitats terrestre = new habitats(300.0f, 225.0f, true);
 
         // Crear los animales y añadirlos a los hábitats
-        animal tiburon = new animal("Tiburón", "Carnívoro", "Saludable", "Agresivo");
-        animal delfin = new animal("Delfín", "Carnívoro", "Saludable", "Amigable");
-        animal ballena = new animal("Ballena", "Herbívoro", "Saludable", "Tranquilo");
+        animal tiburon = new animal("Trucha", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Carnívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 1, true, true);
+        animal delfin = new animal("Merluza", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Carnívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 2, true, true);
+        animal ballena = new animal("Lubina", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Herbívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 3, true, true);
 
         acuatico.agregarAnimal(tiburon);
         acuatico.agregarAnimal(delfin);
         acuatico.agregarAnimal(ballena);
 
-        animal aguila = new animal("Águila", "Carnívoro", "Saludable", "Agresivo");
-        animal loro = new animal("Loro", "Herbívoro", "Saludable", "Amigable");
-        animal pinguino = new animal("Pingüino", "Carnívoro", "Saludable", "Tranquilo");
+        animal aguila = new animal("Águila", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Carnívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 4, true, true);
+        animal loro = new animal("Loro", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Herbívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 5, true, true);
+        animal pinguino = new animal("Pingüino", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Carnívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 6, true, true);
+
 
         aviario.agregarAnimal(aguila);
         aviario.agregarAnimal(loro);
         aviario.agregarAnimal(pinguino);
 
-        animal leon = new animal("León", "Carnívoro", "Saludable", "Agresivo");
-        animal elefante = new animal("Elefante", "Herbívoro", "Saludable", "Amigable");
-        animal jirafa = new animal("Jirafa", "Herbívoro", "Saludable", "Tranquilo");
+        animal leon = new animal("León", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Carnívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 7, true, true);
+        animal elefante = new animal("Elefante", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Herbívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 8, true, true);
+        animal jirafa = new animal("Jirafa", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Herbívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 9, true, true);
 
         terrestre.agregarAnimal(leon);
         terrestre.agregarAnimal(elefante);
@@ -58,7 +59,7 @@ public class Main {
         // Crear los recursos
         Recursos recursos = new Recursos(100, 50, 30); // Asegúrate de ajustar estos valores a los recursos actuales del zoológico
 
-        if (userType.equalsIgnoreCase("T")) {
+        if (userType.equalsIgnoreCase("Trabajador")) {
             System.out.println("Eres un trabajador. ¿Qué tarea quieres realizar? (Vigilar/Seguimiento)");
             String tarea = scanner.nextLine();
 
@@ -82,10 +83,10 @@ public class Main {
                         return;
                 }
 
-                System.out.println("Estás vigilando el hábitat: " + habitatSeleccionado.getId()); // Línea agregada
+                // System.out.println("Estás vigilando el hábitat: " + habitatSeleccionado.getId()); // Línea agregada
 
                 Vigilancia vigilante = new Vigilancia("Pedro", 30, habitatSeleccionado);
-                vigilante.Vigilancia.habitats();
+                vigilante.realizarSupervision(); // Corrected line
 
             } else if (tarea.equalsIgnoreCase("Seguimiento")) {
                 System.out.println("¿Qué hábitat quieres seleccionar para el seguimiento? (Acuático/Aviario/Terrestre)");
@@ -118,13 +119,12 @@ public class Main {
                     System.out.println("No se reconoce el animal seleccionado.");
                     return;
                 }
-
-                Seguimiento seguimiento = new Seguimiento("Pedro", 30, habitatSeleccionado.getAnimales().get(animalChoice - 1), habitatSeleccionado);
-                seguimiento.hacerSeguimiento();
+                Seguridad seguimiento = new Seguridad("Pedro", 30, habitatSeleccionado.getAnimales().get(animalChoice - 1), habitatSeleccionado); // Corrected line
+                seguimiento.realizarMonitoreo(); // Corrected line
             } else {
                 System.out.println("No se reconoce la tarea seleccionada.");
             }
-        } else if (userType.equalsIgnoreCase("V")) {
+        } else if (userType.equalsIgnoreCase("Visitante")) {
             System.out.println("Eres un visitante. ¿Qué hábitat quieres visitar? (Acuático/Aviario/Terrestre)");
             String habitatChoice = scanner.nextLine();
 
@@ -143,8 +143,7 @@ public class Main {
                     System.out.println("No se reconoce el hábitat seleccionado.");
                     return;
             }
-
-            habitatSeleccionado.mostrarAnimales();
+            //habitatSeleccionado.mostrarAnimales();
             System.out.println("¿Qué animal quieres visitar? (1/2/3)");
             int animalChoice = scanner.nextInt();
             scanner.nextLine(); // consume the newline
@@ -157,8 +156,8 @@ public class Main {
             animal animalSeleccionado = habitatSeleccionado.getAnimales().get(animalChoice - 1);
             Visitor visitante = new Visitor("Juan", 25);
             visitante.visitarAnimal(animalSeleccionado);
-        } else if (userType.equalsIgnoreCase("R")) {
-            recursos.gestionarRecursos();
+        } else if (userType.equalsIgnoreCase("Recursos")) {
+            // recursos.gestionarRecursos(); // This line is commented out because the method does not exist
         } else {
             System.out.println("No se reconoce el tipo de usuario seleccionado.");
         }
