@@ -1,7 +1,6 @@
 package main;
 
 import gestion_habitats.habitats;
-import gestion_personal.Camera;
 
 import java.util.List;
 
