@@ -1,11 +1,12 @@
 package main;
 
+import gestion_recursos.Recursos;
 import java.util.List;
 
 public class Staff extends Person {
-    private List<Resource> resources;
+    private List<Recursos> resources;
 
-    public Staff(List<Resource> resources) {
+    public Staff(List<Recursos> resources) {
         this.resources = resources;
     }
 
@@ -13,17 +14,16 @@ public class Staff extends Person {
         return "Staff";
     }
 
-    public List<Resource> getResources() {
+    public List<Recursos> getResources() {
         return resources;
     }
 
     public void manage() {
         System.out.println("Managing the resources...");
-        for (Resource resource : resources) {
-            System.out.println("Resource name: " + resource.getName());
-            System.out.println("Current food: " + resource.getFood());
-            System.out.println("Current medicine: " + resource.getMedicine());
-            System.out.println("Current equipment: " + resource.getEquipment());
+        for (Recursos resource : resources) {
+            System.out.println("Current food: " + resource.obtenerTotalAlimentos());
+            System.out.println("Current medicine: " + resource.obtenerTotalMedicamentos());
+            System.out.println("Current personnel: " + resource.obtenerTotalPersonal());
         }
     }
 }
