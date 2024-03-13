@@ -23,7 +23,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Definir las variables
-        System.out.println("¿Eres un visitante, un trabajador o deseas ver los recursos del zoológico? (Vigilar/Trabajadir/Recursos)");
+        System.out.println("¿Eres un visitante, un trabajador o deseas ver los recursos del zoológico? (Visitante/Staff/Revisar recursos)");
         String userType = scanner.nextLine(); // Aquí el usuario introduce su tipo
 
         habitats acuatico = new habitats(100.0f, 75.0f, true);
@@ -31,9 +31,9 @@ public class Main {
         habitats terrestre = new habitats(300.0f, 225.0f, true);
 
         // Crear los animales y añadirlos a los hábitats
-        animal tiburon = new animal("Trucha", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Carnívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 1, true, true);
-        animal delfin = new animal("Merluza", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Carnívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 2, true, true);
-        animal ballena = new animal("Lubina", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Herbívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 3, true, true);
+        animal tiburon = new animal("Tiburón", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Carnívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 1, true, true);
+        animal delfin = new animal("Delfín", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Carnívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 2, true, true);
+        animal ballena = new animal("Ballena", "Especie", "Raza", "Color", "Sexo", "Edad", "Peso", "Altura", "Herbívoro", "Habitat", "Alimentacion", "Reproduccion", "Cuidados", "Enfermedades", "Vacunas", 3, true, true);
 
         acuatico.agregarAnimal(tiburon);
         acuatico.agregarAnimal(delfin);
@@ -59,7 +59,7 @@ public class Main {
         // Crear los recursos
         Recursos recursos = new Recursos(100, 50, 30); // Asegúrate de ajustar estos valores a los recursos actuales del zoológico
 
-        if (userType.equalsIgnoreCase("Trabajador")) {
+        if (userType.equalsIgnoreCase("Staff")) {
             System.out.println("Eres un trabajador. ¿Qué tarea quieres realizar? (Vigilar/Seguimiento)");
             String tarea = scanner.nextLine();
 
@@ -156,7 +156,7 @@ public class Main {
             animal animalSeleccionado = habitatSeleccionado.getAnimales().get(animalChoice - 1);
             Visitor visitante = new Visitor("Juan", 25);
             visitante.visitarAnimal(animalSeleccionado);
-        } else if (userType.equalsIgnoreCase("Recursos")) {
+        } else if (userType.equalsIgnoreCase("Revisar recursos")) {
             // recursos.gestionarRecursos(); // This line is commented out because the method does not exist
         } else {
             System.out.println("No se reconoce el tipo de usuario seleccionado.");
