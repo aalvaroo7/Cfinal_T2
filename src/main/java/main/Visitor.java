@@ -1,33 +1,26 @@
 package main;
 
 import animales.animal;
-import gestion_habitats.habitats;
 
-public class Visitor extends Person {
-    private habitats habitat;
-    private Camera state;
-    private animal observedAnimal;
+public class Visitor {
+    private String nombre;
+    private int edad;
 
-    public Visitor(habitats habitat, Camera state, animal observedAnimal) {
-        this.habitat = habitat;
-        this.state = state;
-        this.observedAnimal = observedAnimal;
+    public Visitor(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
     }
 
-    public String identify() {
-        return "Visitor";
+    public String getNombre() {
+        return nombre;
     }
 
-    public habitats getHabitat() {
-        return habitat;
+    public int getEdad() {
+        return edad;
     }
 
-    public Camera getState() {
-        return state;
+    public void visitarAnimal(animal animal) {
+        System.out.println("El visitante " + nombre + " está viendo al animal: " + animal.getNombre());
+        animal.manage();
     }
-
-    public animal getObservedAnimal() {
-        return observedAnimal;
-    }
-
 }
