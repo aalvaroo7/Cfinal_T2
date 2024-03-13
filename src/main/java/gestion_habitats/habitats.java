@@ -55,4 +55,7 @@ public class habitats {
     public List<animal> getAnimales() {
         return this.animales; // Add this method
     }
+
+    public void agregarAnimal(animal tiburon) {
+    }
 }
